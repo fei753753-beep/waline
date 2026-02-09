@@ -1,20 +1,11 @@
 {
   "name": "comment",
-  "github": {
-    "silent": true
-  },
-  "rootDirectory": "example",
-  "installCommand": "pnpm install --no-frozen-lockfile",
+  "github": { "silent": true },
+  "installCommand": "corepack enable && corepack prepare pnpm@10.28.2 --activate && pnpm install --no-frozen-lockfile",
   "builds": [
-    {
-      "src": "example/index.cjs",
-      "use": "@vercel/node"
-    }
+    { "src": "example/index.cjs", "use": "@vercel/node" }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "example/index.cjs"
-    }
+    { "src": "/(.*)", "dest": "example/index.cjs" }
   ]
 }

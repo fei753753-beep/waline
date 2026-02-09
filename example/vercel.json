@@ -3,5 +3,17 @@
   "github": {
     "silent": true
   },
-  "installCommand": "pnpm install --no-frozen-lockfile"
+  "installCommand": "pnpm install --no-frozen-lockfile",
+  "builds": [
+    {
+      "src": "index.cjs",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "index.cjs"
+    }
+  ]
 }

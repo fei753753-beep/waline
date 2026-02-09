@@ -3,21 +3,5 @@
   "github": {
     "silent": true
   },
-  "installCommand": "pnpm install --no-frozen-lockfile",
-  "builds": [
-    {
-      "src": "robots.txt",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "index.cjs",
-      "use": "@vercel/node"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/((?!robots\\.txt$).*)",
-      "destination": "index.cjs"
-    }
-  ]
+  "installCommand": "pnpm install --no-frozen-lockfile"
 }

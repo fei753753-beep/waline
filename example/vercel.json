@@ -3,6 +3,7 @@
   "github": {
     "silent": true
   },
+  "installCommand": "pnpm install --no-frozen-lockfile",
   "builds": [
     {
       "src": "robots.txt",
